@@ -17,4 +17,16 @@ class AgiantbirdPalindromeTest < Minitest::Test
   def test_palindrome_with_punctuation
   	assert "Madam, I'm Adam.".palindrome?
   end
+
+  def test_integer_non_palindrome
+  	refute 12345.palindrome?
+  end
+
+  def test_integer_palindrome
+  	assert 12321.palindrome?
+  end
+
+  def test_string_with_number_palindrome
+  	assert "aa1aa".palindrome?
+  end
 end
